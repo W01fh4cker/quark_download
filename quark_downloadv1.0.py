@@ -23,17 +23,7 @@ save_path = input("请输入您想保存的绝对地址：")
 def resolution_url_query():
     url_result = "http://www.52api.cc/pan_quark/api.php?url=" + str(url_wait)
     print(url_result)
-    headers = {
-        'Connection': 'keep-alive',
-        # 'Host': 'dl-pc-sz.drive.quark.cn',
-        'Sec-Fetch-Dest': 'iframe',
-        'Sec-Fetch-Mode': 'navigate',
-        'Sec-Fetch-Site': 'same-site',
-        'Upgrade-Insecure-Requests': '1',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36',
-        'Referer': 'http://pan.quark.cn/'
-        }
-    resp = requests.get(url=url_result, headers=headers)
+    resp = requests.get(url=url_result)
     global res
     res = json.loads(resp.content.decode('utf-8'))
     print(res)
