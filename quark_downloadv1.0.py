@@ -14,8 +14,6 @@ ___          ______          ___        ________         ____          _______
 import json
 import time
 import requests
-import os
-import time
 import pycurl
 import certifi
 url_wait = input("请输入您需要解析的夸克网盘地址：")
