@@ -52,7 +52,7 @@ def resolution_url_query():
             print("下载文件名为：" + filename + "，下载文件大小为：" + filesize)
             c = pycurl.Curl()
             c.setopt(pycurl.CAINFO, certifi.where())
-            c.setopt(pycurl.HTTPHEADER,["Referer: https://pan.quark.cn/","User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36","Host:dl-pc-zb.drive.quark.cn","Cookie:ctoken=kQeJHgbvLAfJuAAb2CURJS9T; b-user-id=c3ab591b-5968-c0f8-0691-f0816b7d1709; __wpkreporterwid_=25250a2a-f687-48e6-a5b9-72d7910badbf; __kp=ac45ec00-b5be-11ec-9aad-7713d358348f; __kps=AAQTvViI2q6HHYICe9b0QP5L; __puus=c6c1d554f26c2aa40e41bcb20f8f10e2AASLGmwYthlTjWiwd30sZZO6nBQGd+/l7bPQY/kIPxSC8KPy0yWgS1CRXAliJnOUPoa96jpz7wRmQrOLqem48Fr6LlbtF0WAWJ0W542dTUoV9CFVjVLrFbRtwZ//SPB3TpPBUEUwR69To7Wxwatys11ecRdUa/FgkBIr+ZGWCKpi4A==","Connection:keep-alive","Sec-Fetch-Dest:iframe","Sec-Fetch-Mode:navigate","Sec-Fetch-Site:same-site","Upgrade-Insecure-Requests:1"])
+            c.setopt(pycurl.HTTPHEADER,["Referer: https://pan.quark.cn/","User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36","Host:dl-pc-zb.drive.quark.cn","Cookie:这里填入你的cookie","Connection:keep-alive","Sec-Fetch-Dest:iframe","Sec-Fetch-Mode:navigate","Sec-Fetch-Site:same-site","Upgrade-Insecure-Requests:1"])
             c.setopt(pycurl.URL, download_url)
             c.perform()
 
